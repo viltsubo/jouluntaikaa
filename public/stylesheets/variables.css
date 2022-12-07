@@ -1,0 +1,24 @@
+:root {
+    --font-color: black;
+    --font-size: 20px;
+    --scrollbar-color: white;
+    --scrollbar-thumb-color: 
+    rgb(173, 93, 18);
+    --counter-days-color: #2ea10b;
+    --counter-hours-color: #F6F4F3;
+    --counter-minutes-color: #276FBF;
+    --counter-seconds-color: #F0A202;
+    --counter-bg-color: #ff2c25;
+    --counter-dark: #080925;
+    --counter-white: #F6F4F3;
+    --counter-star: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    --profile-bg-color: #ff2c25;
+}
+
+/*
+COLOR BANK
+    --counter-days-color: #EF2F3C;
+    --counter-dark: #183059;
+    --counter-bg-color: #df160f;
+
+*/

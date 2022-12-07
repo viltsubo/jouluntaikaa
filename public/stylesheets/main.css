@@ -1,0 +1,40 @@
+@import 'variables.css';
+@import 'header.css';
+@import 'index.css';
+@import 'counter.css';
+
+:root {
+    font-family: "Gotham Rounded Book";
+    font-size: var(--font-size);
+    color: var(--font-color);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Not sure if this is needed or what it does */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: none;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+    width: .3rem;
+}
+body::-webkit-scrollbar-track {
+    background: var(--scrollbar-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+}

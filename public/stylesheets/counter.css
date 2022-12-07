@@ -1,0 +1,134 @@
+/* Modified from this: https://codepen.io/juliepark/pen/pKybKa */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900');
+
+.counter-container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  background-color: var(--counter-bg-color);
+  z-index: 10;
+}
+
+.countdown-title {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .25rem;
+}
+
+#countdown-greeting-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    margin-top: 3rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#countdown-greeting {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+#countdown-greeting-undertext {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    width: 30rem;
+    font-size: .8rem;
+    margin: auto;
+    margin-top: .5rem;
+}
+
+.counter-img-container-1 {
+    width: 100%;
+    height: 8rem;
+    position: absolute;
+    bottom: 59%;
+    right: 11.1rem;
+    z-index: -1;
+}
+
+#counter-img-1 {
+    height: 100%;
+    object-fit: cover;
+}
+
+.counter-img-container-2 {
+    width: 100%;
+    height: 9rem;
+    position: absolute;
+    bottom: 59%;
+    left: 11rem;
+    z-index: -1;
+}
+
+#counter-img-2 {
+    height: 100%;
+    object-fit: cover;
+}
+
+.counter-img-container-3 {
+    width: 100%;
+    height: 7rem;
+    position: absolute;
+    bottom: 59%;
+    right: 3.6rem;
+    z-index: -1;
+}
+
+#counter-img-3 {
+    height: 100%;
+    object-fit: cover;
+}
+
+#timer {
+  color: var(--counter-white);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: .7rem;
+  letter-spacing: .25rem;
+}
+
+.days, .hours, .minutes, .seconds {
+  display: inline-block;
+  padding: 1rem;
+  width: 7rem;
+  border-radius: .5rem;
+}
+
+.days {
+  background: var(--counter-days-color);
+}
+
+.hours {
+  background: var(--counter-hours-color);
+  color: var(--counter-dark);
+}
+
+.minutes {
+  background: var(--counter-minutes-color);
+}
+
+.seconds {
+  background: var(--counter-seconds-color);
+
+  /* I don't think this is needed
+  .numbers {
+   
+  }
+  */
+}
+
+.numbers {
+  color: var(--counter-dark);
+  font-size: 3rem;
+}

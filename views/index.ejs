@@ -1,1 +1,139 @@
-MOI MAAILMA!
+<section class="introduction">
+    <div class="introduction-img-container">
+        <img src="./images/Stock_photos/Christmas/bg_1.jpg" alt="" class="introduction-img">
+    </div>
+    <div class="introduction-text-container">
+        <div class="introduction-text-1">Hyvää Joulua!</div>
+        <div class="introduction-text-2">Lorem Ipsum!</div>
+    </div>
+</section>
+
+<!-- Javascript for countdown timer -->
+<script>
+
+    // Returns next monday(1), tuesday(2) etc.
+    function getNextDay(x) {
+        let now = new Date()
+        now.setDate(now.getDate() + (x+(7-now.getDay())) % 7)
+        return now
+    }
+
+    // Countdown timer loop
+    let timer = setInterval(function() {
+
+        // Get today's date
+        const today = new Date().getTime()
+
+        // Get next loma date
+        const lomaYear = getNextDay(5).getFullYear()
+        const lomaMonth = getNextDay(5).getMonth()
+        const lomaDay = getNextDay(5).getDate()
+        const lomaDate = new Date(lomaYear, lomaMonth, lomaDay, 18).getTime()
+
+        // Get next paluu date
+        const paluuYear = getNextDay(7).getFullYear()
+        const paluuMonth = getNextDay(7).getMonth()
+        const paluuDay = getNextDay(7).getDate()
+        const paluuDate = new Date(paluuYear, paluuMonth, paluuDay, 16, 20).getTime()
+
+        // Define this outside the scope of if/else block
+        let diff
+
+        // Booleans to check whether lomilla or not
+        let lomilla
+        let palaamassa
+        if (today < lomaDate) {
+            lomilla = false
+            palaamassa = false
+        } else if (today > lomaDate && today < paluuDate) {
+            lomilla = true
+            palaamassa = false
+        } else {
+            lomilla = true
+            palaamassa = true
+        }
+
+
+        // Checks whether lomilla or not
+        if (lomilla) {
+            // Target date is in the past (lomilla)
+
+            // Check if journey to garrison has already started
+            if (palaamassa) {
+                // Loma has ended but it is still Sunday
+                diff = lomaDate - today
+                document.getElementById('countdown-greeting').innerHTML = 'Aikaa jäljellä, ennen kuin se palaa takaisin'
+                document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä ihanuuden sekunneista, kun vielä voit. Pian alkaa kärsimys!'
+            } else {
+                // There is still some loma left
+                diff = paluuDate - today
+                document.getElementById('countdown-greeting').innerHTML = 'Aikaa jäljellä kärsittävänä'
+                document.getElementById('countdown-greeting-undertext').innerHTML = 'Ei se mitään, kohta se on ohi. Kestät vielä!'
+            }
+        } else {
+            // Target date is in the future (ei lomilla)
+            diff = lomaDate - today
+            document.getElementById('countdown-greeting').innerHTML = 'Aikaa jäljellä, ennen kuin se palaa takaisin'
+            document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä ihanuuden sekunneista, kun vielä voit. Pian alkaa kärsimys!'
+        }
+
+        // Math magic wizardy
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24))
+        let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+        let seconds = Math.floor((diff % (1000 * 60)) / 1000)
+
+        // Injects #timer with correct data
+        document.getElementById("timer").innerHTML = 
+        `
+            <div class="counter-img-container-2">
+                <img id="counter-img-2" src="./images/Stock_photos/Christmas/tree_2.png" alt="">
+            </div>
+            <div class="days">
+                <div class="numbers"> ${days} </div>
+                days
+            </div>
+            <div class="counter-img-container-1">
+                <img id="counter-img-1" src="./images/Stock_photos/Christmas/tree_1.png" alt="">
+            </div>
+            <div class="hours">
+                <div class="numbers"> ${hours} </div>
+                hours
+            </div>
+            <div class="minutes">
+                <div class="numbers"> ${minutes} </div>
+                minutes
+            </div>
+            <div class="counter-img-container-3">
+                <img id="counter-img-3" src="./images/Stock_photos/Christmas/tree_3.png" alt="">
+            </div>
+            <div class="seconds">
+                <div class="numbers"> ${seconds} </div>
+                seconds
+            </div>
+        `
+
+    }, 1000);
+</script>
+
+<div class="counter-container">
+    <h1 class="countdown-title">Millon se vittuaivo on täällä taas?</h1>
+    <div id="timer"></div>
+    <div id="countdown-greeting"></div>
+    <div id="countdown-greeting-undertext"></div>
+</div>
+
+<section class="profile-container">
+    <div class="profile-img-container">
+        <img src="./images/Stock_photos/portrait_template.jpg" alt="" class="profile-img">
+    </div>
+    <div class="profile-text-container">
+        <div class="profile-text-title">Ronja</div>
+        <div class="profile-text">lorem ipsum</div>
+        <ul class="profile-text-bulletpoints">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+</section>
