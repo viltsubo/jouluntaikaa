@@ -39,17 +39,21 @@
     flex-direction: row;
     justify-content: center;
     background-color: var(--profile-bg-color);
+    padding-top: 3rem;
 }
 
 .profile-img-container {
     width: 20rem;
+    overflow: hidden;
 }
 
 .profile-img {
-    width: 100%;
+    width: 150%;
     height: 25rem;
+    position: relative;
+    right: 4rem;
     object-fit: cover;
-    object-position: 50% 35%;
+    object-position: 100% 50%;
 }
 
 .profile-text-container {
@@ -60,13 +64,27 @@
 
 .profile-text-title {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: .3rem;
+}
+
+.profile-text-title-undertext {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
 }
 
 .profile-text {
 
 }
 
+.line-through {
+    text-decoration: line-through;
+}
+
 .profile-text-bulletpoints {
     
+}
+
+.change-font {
+    font-family: Arial;
 }

@@ -7,7 +7,7 @@
   margin: auto;
   overflow: hidden;
   padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   background-color: var(--counter-bg-color);
   z-index: 10;
 }
