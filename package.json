@@ -1,7 +1,7 @@
 {
   "name": "TJ-laskuri",
   "version": "1.0.0",
-  "description": "",
+  "description": "WHEN CREATING A NEW SERVER:",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -16,9 +16,17 @@
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
     "method-override": "^3.0.0",
-    "mongoose": "^6.7.4"
+    "mongoose": "^6.8.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viltsubo/tjlaskuri.git"
+  },
+  "bugs": {
+    "url": "https://github.com/viltsubo/tjlaskuri/issues"
+  },
+  "homepage": "https://github.com/viltsubo/tjlaskuri#readme"
 }

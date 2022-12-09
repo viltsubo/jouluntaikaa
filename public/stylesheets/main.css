@@ -4,7 +4,7 @@
 @import 'counter.css';
 
 :root {
-    font-family: "Gotham Rounded Book";
+    font-family: "Roboto", "Helvetica";
     font-size: var(--font-size);
     color: var(--font-color);
 }
