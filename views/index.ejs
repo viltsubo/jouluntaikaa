@@ -63,7 +63,7 @@
                 // Loma has ended but it is still Sunday
                 diff = lomaDate - today
                 document.getElementById('countdown-greeting').innerHTML = 'Aikaa jäljellä, ennen kuin se palaa takaisin'
-                document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä ihanuuden sekunneista, kun vielä voit. Pian alkaa kärsimys!'
+                document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä ihanuuden sekunneista kun vielä voit. Pian alkaa kärsimys!'
             } else {
                 // There is still some loma left
                 diff = paluuDate - today
@@ -74,7 +74,7 @@
             // Target date is in the future (ei lomilla)
             diff = lomaDate - today
             document.getElementById('countdown-greeting').innerHTML = 'Aikaa jäljellä, ennen kuin se palaa takaisin'
-            document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä ihanuuden sekunneista, kun vielä voit. Pian alkaa kärsimys!'
+            document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä ihanuuden sekunneista kun vielä voit. Pian alkaa kärsimys!'
         }
 
         // Math magic wizardy
@@ -123,9 +123,7 @@
     <div id="countdown-greeting-undertext"></div>
 </div>
 
-<div class="wreath-img-container">
-    <img src="" alt="" class="wreath-img">
-</div>
+<div class="wreath-img"></div>
 
 <section class="profile-container">
     <div class="profile-img-container">
@@ -134,12 +132,13 @@
     <div class="profile-text-container">
         <div class="profile-text-title">Ronja</div>
         <div class="profile-text-title-undertext">Breakdown of a Character</div>
-        <div class="profile-text">Ronja, Rumpu, <span class="line-through">Muru</span>, Vitunääliö, Pikku myy, Ikuinen tiskaaja... Rakkailla lapsilla on monta nimeä. Jostain syystä myös sinulla. Kenties yksi nimi jokaiselle lukuisista alter egoistasi? Niitä kyllä riittää, jaksat nimittäin jatkuvasti hämmästyttää uusilla puolillasi. Yleensä yllätykset ovat positiivisia, mutta eivät ain.. krhm, siis ovat aina positiivisia... <br>...<br> Pureudutaan seuraavaksi pohtimaan, mistä paloista tuo mystinen Maria rakentuu. Erityisesti näistä pidän!</div>
+        <div class="profile-text">Ronja, Rumpu, <span class="line-through">Muru</span>, Vitunääliö, Pikku myy, Tiskaaja... Rakkailla lapsilla on monta nimeä. Jostain syystä myös sinulla. Kenties yksi nimi jokaiselle lukuisista alter egoistasi? Niitä kyllä riittää, jaksat nimittäin jatkuvasti hämmästyttää uusilla puolillasi. Yleensä yllätykset ovat positiivisia, mutta eivät ain.. krhm, siis ovat aina positiivisia... <br>...<br> Pureudutaan seuraavaksi pohtimaan, mistä paloista tuo mystinen Maria rakentuu. Erityisesti näistä pidän!</div>
         <ul class="profile-text-bulletpoints">
-            <li>Joku oikea</li>
-            <li>Joku vitsi</li>
-            <li class="change-font">( • )( • ) ԅ(‾⌣‾ԅ)</li>
-            <li>Joku oikea</li>
+            <li>Seurassasi on aina hyvä olla. Pelkkä läsnäolosi tuo mukanaan positiivisuuden auran.</li>
+            <li>Olet syötävän suloinen (joskus tosin kitkerä)</li>
+            <li>Vaikka et ole enää lapsi, on joitain leluja, joista <a class="link-text" href="./images/Ronja/ronja_toy.jpg" target="_blank">et ole voinut luopua.</a></li>
+            <li>No siis...<br><span class="change-font">( • )( • ) ԅ(‾⌣‾ԅ)</span></li>
+            <li>Oot aivan ihana😍 En voisi toivoa parempaa tyttöystävää (trust me, yritin ja siitä tuli klooni susta).</li>
         </ul>
         <div class="profile-text-2">Lorem ipsum</div>
     </div>

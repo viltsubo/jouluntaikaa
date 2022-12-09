@@ -53,7 +53,7 @@ First you have to login on heroku with a command (after downloading heroku CLI) 
 >> git add .
 >> git commit -m "<message>"
 >> (git push origin)
->> git push heroku master
+>> git push heroku master / main
 
 Then it is needed to set the mongoose so that heroku can use it. Follow this tutorial (https://www.youtube.com/watch?v=imR9LlbG3pU). Got to mongo db atlas and create a new project.
 In there, create a new cluster. Then click "connect" and choose the second one. Whitelist everyone, create a user. The copy the long string, change the <password> to match that

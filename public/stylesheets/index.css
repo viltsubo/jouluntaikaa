@@ -34,6 +34,19 @@
     color:rgb(255, 255, 255);
 }
 
+
+.wreath-img {
+    width: 100%;
+    height: 5rem;
+    background-image: url('/images/Stock_photos/Christmas/wreath_1.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-x;
+    position: absolute;
+    z-index: 10;
+}
+
+
 .profile-container {
     display: flex;
     flex-direction: row;
@@ -82,7 +95,17 @@
 }
 
 .profile-text-bulletpoints {
-    
+    text-align: left;
+}
+
+.profile-text-bulletpoints li {
+    padding: .1rem 0rem;
+}
+
+.link-text {
+    text-decoration: underline;
+    font-weight: bold;
+    color: var(--font-color)
 }
 
 .change-font {
