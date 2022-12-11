@@ -8,7 +8,7 @@
     --counter-hours-color: #F6F4F3;
     --counter-minutes-color: #276FBF;
     --counter-seconds-color: #F0A202;
-    --counter-bg-color: #ff2c25;
+    --counter-bg-color: #ff946a;
     --counter-dark: #080925;
     --counter-white: #F6F4F3;
     --counter-star: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
@@ -21,5 +21,10 @@ COLOR BANK
     --counter-days-color: #EF2F3C;
     --counter-dark: #183059;
     --counter-bg-color: #df160f;
+    --counter-bg-color: #ff2c25;
+    --counter-bg-color: #fda8a5;
+    --counter-bg-color: #fda8a5c0;
+    --counter-bg-color: #ff946a;
+    --counter-bg-color: #f89d79;
 
 */

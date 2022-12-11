@@ -6,7 +6,6 @@
   position: relative;
   margin: auto;
   overflow: hidden;
-  padding-top: 2rem;
   padding-bottom: 3rem;
   background-color: var(--counter-bg-color);
   z-index: 10;
@@ -15,12 +14,14 @@
 .countdown-title {
   text-align: center;
   margin-top: 2rem;
-  margin-bottom: 8rem;
+  margin-bottom: 9rem;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: .25rem;
+  font-family: "Lato";
 }
 
+/* I don't think this is used */
 #countdown-greeting-title {
     text-align: center;
     text-transform: uppercase;
@@ -52,7 +53,7 @@
     width: 100%;
     height: 8rem;
     position: absolute;
-    bottom: 59%;
+    bottom: 52%;
     right: 11.1rem;
     z-index: -1;
 }
@@ -66,7 +67,7 @@
     width: 100%;
     height: 9rem;
     position: absolute;
-    bottom: 59%;
+    bottom: 52%;
     left: 11rem;
     z-index: -1;
 }
@@ -80,7 +81,7 @@
     width: 100%;
     height: 7rem;
     position: absolute;
-    bottom: 59%;
+    bottom: 52%;
     right: 3.6rem;
     z-index: -1;
 }
@@ -131,4 +132,55 @@
 .numbers {
   color: var(--counter-dark);
   font-size: 3rem;
+}
+
+
+@media only screen and (max-width: 922px) {
+  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
+    bottom: 55%;
+  }
+}
+
+@media only screen and (max-width: 683px) {
+  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
+    bottom: 51%;
+  }
+}
+
+@media only screen and (max-width: 591px) {
+  #timer {
+    font-size: .6rem;
+    letter-spacing: .2rem;
+  }
+  
+  .days, .hours, .minutes, .seconds {
+    padding: .2rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .numbers {
+    color: var(--counter-dark);
+    font-size: 2rem;
+    padding-top: .5rem;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  #timer {
+    font-size: .6rem;
+    letter-spacing: .2rem;
+  }
+  
+  .days, .hours, .minutes, .seconds {
+    padding: .2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .numbers {
+    color: var(--counter-dark);
+    font-size: 2rem;
+    padding-top: .5rem;
+  }
 }

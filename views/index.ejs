@@ -4,7 +4,7 @@
     </div>
     <div class="introduction-text-container">
         <div class="introduction-text-1">Hyvää Joulua!</div>
-        <div class="introduction-text-2">Lorem Ipsum!</div>
+        <div class="introduction-text-2">Caution: Continue at your own risk</div>
     </div>
 </section>
 
@@ -63,7 +63,7 @@
                 // Loma has ended but it is still Sunday
                 diff = lomaDate - today
                 document.getElementById('countdown-greeting').innerHTML = 'Aikaa jäljellä, ennen kuin se palaa takaisin'
-                document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä ihanuuden sekunneista kun vielä voit. Pian alkaa kärsimys!'
+                document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä rauhan sekunneista kun vielä voit. Pian alkaa kärsimys!'
             } else {
                 // There is still some loma left
                 diff = paluuDate - today
@@ -74,7 +74,7 @@
             // Target date is in the future (ei lomilla)
             diff = lomaDate - today
             document.getElementById('countdown-greeting').innerHTML = 'Aikaa jäljellä, ennen kuin se palaa takaisin'
-            document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä ihanuuden sekunneista kun vielä voit. Pian alkaa kärsimys!'
+            document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä rauhan sekunneista kun vielä voit. Pian alkaa kärsimys!'
         }
 
         // Math magic wizardy
@@ -102,14 +102,14 @@
             </div>
             <div class="minutes">
                 <div class="numbers"> ${minutes} </div>
-                minutes
+                min
             </div>
             <div class="counter-img-container-3">
                 <img id="counter-img-3" src="./images/Stock_photos/Christmas/tree_3.png" alt="">
             </div>
             <div class="seconds">
                 <div class="numbers"> ${seconds} </div>
-                seconds
+                sec
             </div>
         `
 
@@ -117,7 +117,7 @@
 </script>
 
 <div class="counter-container">
-    <h1 class="countdown-title">Millon se vittuaivo on täällä taas?</h1>
+    <h1 class="countdown-title">Millon se on täällä taas?</h1>
     <div id="timer"></div>
     <div id="countdown-greeting"></div>
     <div id="countdown-greeting-undertext"></div>
@@ -132,15 +132,17 @@
     <div class="profile-text-container">
         <div class="profile-text-title">Ronja</div>
         <div class="profile-text-title-undertext">Breakdown of a Character</div>
-        <div class="profile-text">Ronja, Rumpu, <span class="line-through">Muru</span>, Vitunääliö, Pikku myy, Tiskaaja... Rakkailla lapsilla on monta nimeä. Jostain syystä myös sinulla. Kenties yksi nimi jokaiselle lukuisista alter egoistasi? Niitä kyllä riittää, jaksat nimittäin jatkuvasti hämmästyttää uusilla puolillasi. Yleensä yllätykset ovat positiivisia, mutta eivät ain.. krhm, siis ovat aina positiivisia... <br>...<br> Pureudutaan seuraavaksi pohtimaan, mistä paloista tuo mystinen Maria rakentuu. Erityisesti näistä pidän!</div>
+        <div class="profile-text">Ronja, Rumpu, <span class="line-through">Muru</span>, Palleroinen, Vitunääliö, Muumimamma, Tiskaaja... Rakkailla lapsilla on monta nimeä. Jostain syystä myös sinulla. Kenties yksi nimi jokaiselle lukuisista alter egoistasi? Niitä kyllä riittää, jaksat nimittäin jatkuvasti hämmästyttää uusilla puolillasi. Yleensä yllätykset ovat positiivisia, mutta eivät ain.. krhm, siis ovat aina positiivisia... <br>...<br> Tarkastellaan seuraavaksi, mistä paloista tuo mystinen Maria rakentuu. Erityisesti näistä pidän!</div>
         <ul class="profile-text-bulletpoints">
-            <li>Seurassasi on aina hyvä olla. Pelkkä läsnäolosi tuo mukanaan positiivisuuden auran.</li>
-            <li>Olet syötävän suloinen (namia)</li>
-            <li>Vaikka et ole enää lapsi, on joitain leluja, joista <a class="link-text" href="./images/Ronja/ronja_toy.jpg" target="_blank">et ole voinut luopua.</a></li>
+            <li>Seurassasi on aina hyvä olla. Tuot pelkällä läsnäolollasi mukana positiivisuuden auran</li>
+            <li>Ootvitunkuumajafiksujahauska</li>
+            <li>Vaikka et ole enää lapsi, on joitain leluja, joista <a class="link-text" href="./images/Ronja/ronja_toy.jpg" target="_blank">et ole voinut luopua</a></li>
             <li>No siis...<br><span class="change-font">( • )( • ) ԅ(‾⌣‾ԅ)</span></li>
-            <li>Oot aivan ihana😍 En voisi kuvitella parempaa tyttöystävää (trust me, yritin ja siitä tuli klooni susta).</li>
+            <li>Jostain tuntemattomasta syystä kaulassasi on usein hankaumia..</li>
+            <li>Oot aivan ihana😍 En voisi kuvitella parempaa tyttöystävää (trust me, yritin ja siitä tuli klooni susta)</li>
         </ul>
-        <div class="profile-text-2">Yhdessä vietetty aika on ollut valehtelematta parasta, mitä minulla on pitkään aikaan ollut. Toivon, että pääsemme viettämään vielä monia ihania hetkiä yhdessä ja nauttimaan elämästä. <br><br> Toivottavasti edes häivähdys siitä viestistä, jonka halusin sanoa, välittyi tämän visuaalisen runouden läpi❤️</div>
+        <div class="profile-text-2">Ja listahan jatkuisi tietenkin loputtomiin, ellen hillitsisi itseäni. Jokainen puolistasi on tärkeä ja niiden summa tekee tekee sinusta sinut: täydellisen.<br><br>Vaikka arki ja aikataulut ovat vähentäneet yhteistä aikaa, niin ne yksittäiset yhteiset hetket ovat olleet sitäkin tärkeämpiä. Aika kanssasi on ollut aivan parasta! Toivon, että pääsemme viettämään vielä monia ihania hetkiä yhdessä ja nauttimaan elämästä. <br><br> Toivottavasti edes häivähdys siitä viestistä jonka halusin sanoa, välittyi tämän visuaalisen kakofonian läpi❤️ Vielä kerran, jotta mikään ei jää epäselväksi: olet täydellinen rakkauspakkaus, jota parempaa ei ole mahdollista olla. En vieläkään ymmärrä miten olen sinut napannut, mutta äärimmäisen onnellinen siitä, että olet haavissani😘</div>
     </div>
 </section>
 
+<!-- Yhdessä vietetty aika on ollut valehtelematta parasta, mitä minulla on pitkään aikaan ollut. Toivon, että pääsemme viettämään vielä monia ihania hetkiä yhdessä ja nauttimaan elämästä. <br><br> Toivottavasti edes häivähdys siitä viestistä, jonka halusin sanoa, välittyi tämän visuaalisen runouden läpi❤️ -->

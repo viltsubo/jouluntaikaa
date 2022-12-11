@@ -18,19 +18,18 @@
     top: 30%;
     width: 100%;
     text-align: right;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .introduction-text-1 {
-    position: relative;
-    right: 15%;
+    margin-right: 5rem;
     font-size: 4rem;
     color: rgb(255, 255, 255);
 }
 
 .introduction-text-2 {
-    position: relative;
-    right: 19%;
-    font-size: 3rem;
+    margin-right: 5rem;
+    font-size: 2rem;
     color:rgb(255, 255, 255);
 }
 
