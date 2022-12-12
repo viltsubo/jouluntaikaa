@@ -35,6 +35,7 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .25rem;
+    margin: auto;
     margin-top: 2rem;
     font-size: 1.5rem;
 }
@@ -148,6 +149,10 @@
 
   .countdown-title {
     margin-bottom: 8rem;
+  }
+
+  #countdown-greeting {
+    width: 90%;
   }
 
   #countdown-greeting-undertext {

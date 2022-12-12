@@ -33,18 +33,18 @@
     color:rgb(255, 255, 255);
 }
 
-
 .wreath-img {
     width: 100%;
     height: 5rem;
+    overflow: hidden;
     background-image: url('/images/Stock_photos/Christmas/wreath_1.png');
     background-size: contain;
     background-position: center;
     background-repeat: repeat-x;
     position: absolute;
+    bottom: -31.5rem;
     z-index: 10;
 }
-
 
 .profile-container {
     display: flex;
@@ -52,11 +52,13 @@
     justify-content: center;
     background-color: var(--profile-bg-color);
     padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .profile-img-container {
     width: 20rem;
     overflow: hidden;
+    margin: 0 2.5rem;
 }
 
 .profile-img {
@@ -68,10 +70,14 @@
     object-position: 100% 50%;
 }
 
+.mobile-profile-img {
+    display: none;
+}
+
 .profile-text-container {
     width: 20rem;
     text-align: center;
-    margin: 0rem 5rem;
+    margin: 0rem 2.5rem;
 }
 
 .profile-text-title {
@@ -109,4 +115,160 @@
 
 .change-font {
     font-family: Arial;
+}
+
+@media only screen and (max-width: 1000px) {
+    .introduction-text-1 {
+        margin-right: 1rem;
+        font-size: 4rem;
+    }
+    .introduction-text-2 {
+        margin-right: 1rem;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .profile-img-container {
+        width: 20rem;
+        margin: 0 1rem;
+    }
+    
+    .profile-text-container {
+        width: 20rem;
+        margin: 0rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .introduction-text-container {
+        top: 33%;
+    }
+    .introduction-text-1 {
+        font-size: 3.5rem;
+    }
+    .introduction-text-2 {
+        font-size: 1.7rem;
+    }
+
+    .profile-img-container {
+        width: 20rem;
+        margin: 0 .5rem;
+    }
+    .profile-img {
+        width: 150%;
+        height: 25rem;
+        position: relative;
+        right: 4rem;
+        object-fit: cover;
+        object-position: 100% 50%;
+    }
+    
+    .profile-text-container {
+        width: 20rem;
+        margin: 0rem .5rem;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .introduction-text-1 {
+        margin-right: .3rem;
+    }
+    .introduction-text-2 {
+        margin-right: .3rem;
+    }
+
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-text-title-undertext {
+        margin-bottom: 1rem;
+    }
+
+    .desktop-profile-img {
+        display: none;
+    }
+    .mobile-profile-img {
+        display: block;
+    }
+    .profile-img-container {
+        width: 20rem;
+        margin: 0 auto;
+        margin-bottom: 1.2rem;
+    }
+    .profile-img {
+        width: 150%;
+        height: 25rem;
+        position: relative;
+        right: 4rem;
+        object-fit: cover;
+        object-position: 100% 50%;
+    }
+    
+    .profile-text-container {
+        width: 25rem;
+        margin: 0rem auto;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .introduction-text-container {
+        text-align: center;
+    }
+    .introduction-text-1 {
+        margin-right: 0rem;
+    }
+    .introduction-text-2 {
+        margin-right: 0rem;
+    }
+
+    .profile-img-container {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 1.2rem;
+    }
+    .profile-img {
+        width: 150%;
+        height: 20rem;
+        position: relative;
+        right: 4rem;
+        object-fit: cover;
+        object-position: 100% 40%;
+    }
+    
+    .profile-text-container {
+        width: 90%;
+        margin: 0rem auto;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .profile-img-container {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 1.2rem;
+    }
+    .profile-img {
+        width: 150%;
+        height: 20rem;
+        position: relative;
+        right: 4rem;
+        object-fit: cover;
+        object-position: 100% 40%;
+    }
+    
+    .profile-text-container {
+        width: 90%;
+        margin: 0rem auto;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    .introduction-text-container {
+        top: 20%;
+    }
+    .introduction-text-1 {
+        margin-bottom: .8rem;
+    }
 }
