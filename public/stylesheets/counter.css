@@ -122,6 +122,8 @@
 
 .seconds {
   background: var(--counter-seconds-color);
+  color: var(--counter-dark);
+
 
   /* I don't think this is needed
   .numbers {
@@ -158,6 +160,13 @@
   #countdown-greeting-undertext {
     width: 80%;
   }
+}
+
+@media only screen and (max-width: 644px) {
+  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
+    bottom: 54%;
+  }
+
 }
 
 @media only screen and (max-width: 591px) {
@@ -208,6 +217,13 @@
     font-size: .7rem;
     margin-top: .5rem;
   }
+}
+
+@media only screen and (max-width: 461px) {
+  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
+    bottom: 52%;
+  }
+
 }
 
 @media only screen and (max-width: 426px) {

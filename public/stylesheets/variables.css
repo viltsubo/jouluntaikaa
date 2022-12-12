@@ -7,7 +7,7 @@
     --counter-days-color: #2ea10b;
     --counter-hours-color: #F6F4F3;
     --counter-minutes-color: #276FBF;
-    --counter-seconds-color: #F0A202;
+    --counter-seconds-color: hsl(35, 100%, 73%);
     --counter-bg-color: #ff946a;
     --counter-dark: #080925;
     --counter-white: #F6F4F3;
@@ -26,5 +26,7 @@ COLOR BANK
     --counter-bg-color: #fda8a5c0;
     --counter-bg-color: #ff946a;
     --counter-bg-color: #f89d79;
+    --counter-seconds-color: #F0A202;
+
 
 */
