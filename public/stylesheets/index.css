@@ -46,9 +46,6 @@
     z-index: 10;
 }
 
-/*
-    background: url("/images/Stock_photos/Christmas/wreath_1_2.png") no-repeat scroll center top transparent;*/
-
 .profile-container {
     display: flex;
     flex-direction: row;

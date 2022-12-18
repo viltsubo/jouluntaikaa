@@ -11,7 +11,7 @@
   z-index: 10;
 }
 
-.countdown-title {
+#countdown-title {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 9rem;
@@ -149,7 +149,7 @@
     bottom: 52%;
   }
 
-  .countdown-title {
+  #countdown-title {
     margin-bottom: 8rem;
   }
 
@@ -201,7 +201,7 @@
     padding-top: .8rem;
   }
 
-  .countdown-title {
+  #countdown-title {
     font-size: 2rem;
     letter-spacing: .25rem;
   }

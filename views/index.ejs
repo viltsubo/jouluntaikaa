@@ -111,6 +111,7 @@
             aamujaLeft = (Math.round(aamujaLeft * 100) / 100).toFixed(2)
 
             // User greeting texts
+            document.getElementById('countdown-title').innerHTML = `Milloin se lähtee?`
             document.getElementById('countdown-greeting').innerHTML = `${aamujaLeft} aamua jäljellä kärsittävänä`
             document.getElementById('countdown-greeting-undertext').innerHTML = 'Ei se mitään, kohta se on ohi. Kestät vielä!'
         } else {
@@ -122,6 +123,7 @@
             aamujaLeft = (Math.round(aamujaLeft * 100) / 100).toFixed(2)
 
             // User greeting texts
+            document.getElementById('countdown-title').innerHTML = `Milloin se tulee takaisin?`
             document.getElementById('countdown-greeting').innerHTML = `${aamujaLeft} rauhan aamua jäljellä`
             document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä sekunneista kun vielä voit. Pian alkaa kärsimys!'
         }
@@ -166,7 +168,7 @@
 </script>
 
 <div class="counter-container">
-    <h1 class="countdown-title">Milloin se tulee takaisin?</h1>
+    <h1 id="countdown-title">Milloin se tulee takaisin?</h1>
     <div id="timer"></div>
     <div id="countdown-greeting"></div>
     <div id="countdown-greeting-undertext"></div>
