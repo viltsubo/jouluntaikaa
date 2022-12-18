@@ -8,6 +8,7 @@
     </div>
 </section>
 
+
 <!-- Javascript for countdown timer -->
 <script>
 
@@ -23,8 +24,17 @@
 
         // Get today's date
         const today = new Date().getTime()
+        const thisDay = new Date()
 
-        // Get next loma date
+        // Define this outside the scope of if/else block. Used for math magic wizardy
+        let diff
+
+        
+
+        /* *--------------------start-------------------* */
+        // DELETE THIS IF YOU WANT TO USE SOME MANUALLY SET DATES
+
+        // Get next loma date (broken case where it's Sat or Sun and gives next week's friday is catched with logic below)
         const lomaYear = getNextDay(5).getFullYear()
         const lomaMonth = getNextDay(5).getMonth()
         const lomaDay = getNextDay(5).getDate()
@@ -36,45 +46,84 @@
         const paluuDay = getNextDay(7).getDate()
         const paluuDate = new Date(paluuYear, paluuMonth, paluuDay, 16, 20).getTime()
 
-        // Define this outside the scope of if/else block
-        let diff
-
-        // Booleans to check whether lomilla or not
-        let lomilla
-        let palaamassa
-        if (today < lomaDate) {
+        // Logic for automatic normal loma detection (works with one case where it's default loma start and end days)
+        if (thisDay.getDay() == 6) {
+            // It is Saturday
+            lomilla = true
+        } else if (thisDay.getDay() == 0 && today < paluuDate) {
+            // It is Sunday and still some loma left (not returning to Tikkakoski)
+            lomilla = true
+        } else if (thisDay.getDay() == 0 && today > paluuDate ) {
+            // It is Sunday and not any loma left (returning to Tikkakoski)
             lomilla = false
-            palaamassa = false
-        } else if (today > lomaDate && today < paluuDate) {
+        } else if (today > lomaDate) {
+            // It is Friday and lomilla
             lomilla = true
-            palaamassa = false
+        } else if (today < lomaDate) {
+            // Not yet Friday OR Friday but not yet lomilla (OR broken cases where it's Sat or Sun --> above logic catches those cases)
+            lomilla = false
         } else {
-            lomilla = true
-            palaamassa = true
+            // Handles any unknow broken cases (f.ex. when time equals lomaDate or paluuDate)
+            lomilla = false
         }
 
+        /* *--------------------end-------------------* */
 
-        // Checks whether lomilla or not
-        if (lomilla) {
-            // Target date is in the past (lomilla)
 
-            // Check if journey to garrison has already started
-            if (palaamassa) {
-                // Loma has ended but it is still Sunday
-                diff = lomaDate - today
-                document.getElementById('countdown-greeting').innerHTML = 'Aikaa jäljellä, ennen kuin se palaa takaisin'
-                document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä rauhan sekunneista kun vielä voit. Pian alkaa kärsimys!'
-            } else {
-                // There is still some loma left
-                diff = paluuDate - today
-                document.getElementById('countdown-greeting').innerHTML = 'Aikaa jäljellä kärsittävänä'
-                document.getElementById('countdown-greeting-undertext').innerHTML = 'Ei se mitään, kohta se on ohi. Kestät vielä!'
-            }
+
+        /* *--------------------start-------------------* */
+        // DELETE THIS IF YOU WANT TO USE AUTOMATIC DEFAULT DATES
+        /*
+
+        // This section is used for countdown when lomadate is non default date (you can manually set it)
+
+        // Set dates here yyyy mm (starts at 0), dd, hh, mm
+        const lomaDate = new Date(2022, 11, 22, 16).getTime()
+        const paluuDate = new Date(2023, 0, 2, 16).getTime()
+
+        // Logic to check if lomilla or not
+        if (today < lomaDate) {
+            // Not yet loma date
+            lomilla = false
+        } else if (today > lomaDate && today < paluuDate) {
+            // LomaDate has been reached and it is not yeat paluuDate --> lomilla
+            lomilla = true
+        } else if (today > paluuDate) {
+            // PaluuDate has been reached --> not lomilla
+            lomilla = false
         } else {
-            // Target date is in the future (ei lomilla)
+            // Handle unknown borken cases (f.ex. when time equals lomaDate or paluuDate)
+            lomilla = false
+        }
+
+        */
+        /* *--------------------end-------------------* */
+        
+
+
+        // Handles operation based on lomilla or not
+        if (lomilla) {
+            // Lomilla
+            diff = paluuDate - today
+
+            // Calculates aamuja left
+            let aamujaLeft = diff / 1000 / 60 / 60 / 24
+            aamujaLeft = (Math.round(aamujaLeft * 100) / 100).toFixed(2)
+
+            // User greeting texts
+            document.getElementById('countdown-greeting').innerHTML = `${aamujaLeft} aamua jäljellä kärsittävänä`
+            document.getElementById('countdown-greeting-undertext').innerHTML = 'Ei se mitään, kohta se on ohi. Kestät vielä!'
+        } else {
+            // Not lomilla
             diff = lomaDate - today
-            document.getElementById('countdown-greeting').innerHTML = 'Aikaa jäljellä, ennen kuin se palaa takaisin'
-            document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä rauhan sekunneista kun vielä voit. Pian alkaa kärsimys!'
+
+            // Calculates aamuja left
+            let aamujaLeft = diff / 1000 / 60 / 60 / 24
+            aamujaLeft = (Math.round(aamujaLeft * 100) / 100).toFixed(2)
+
+            // User greeting texts
+            document.getElementById('countdown-greeting').innerHTML = `${aamujaLeft} rauhan aamua jäljellä`
+            document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä sekunneista kun vielä voit. Pian alkaa kärsimys!'
         }
 
         // Math magic wizardy
@@ -117,7 +166,7 @@
 </script>
 
 <div class="counter-container">
-    <h1 class="countdown-title">Millon se on täällä taas?</h1>
+    <h1 class="countdown-title">Milloin se tulee takaisin?</h1>
     <div id="timer"></div>
     <div id="countdown-greeting"></div>
     <div id="countdown-greeting-undertext"></div>
@@ -137,7 +186,7 @@
         </div>
         <div class="profile-text">Ronja, Rumpu, <span class="line-through">Muru</span>, Palleroinen, Mommy, Vitunääliö, Muumimamma, Tiskaaja... Rakkailla lapsilla on monta nimeä. Jostain syystä myös sinulla. Kenties yksi nimi jokaiselle lukuisista alter egoistasi? Niitä kyllä riittää, jaksat nimittäin jatkuvasti hämmästyttää uusilla puolillasi. Yleensä yllätykset ovat positiivisia, mutta eivät ain.. krhm, siis ovat aina positiivisia... <br>...<br> Tarkastellaan seuraavaksi, mistä paloista tuo mystinen Maria rakentuu. Erityisesti näistä pidän!</div>
         <ul class="profile-text-bulletpoints">
-            <li>Seurassasi on aina hyvä olla. Tuot pelkällä läsnäolollasi mukana positiivisuuden auran</li>
+            <li>Seurassasi on hyvä olla. Tuot pelkällä läsnäolollasi mukana positiivisuuden auran</li>
             <li>Ootvitunkuumajafiksujahauska</li>
             <li>Vaikka et ole enää lapsi, on joitain leluja, joista <a class="link-text" href="./images/Ronja/ronja_toy.jpg" target="_blank">et ole voinut luopua</a></li>
             <li>No siis...<br><span class="change-font">( • )( • ) ԅ(‾⌣‾ԅ)</span></li>

@@ -28,9 +28,11 @@
 }
 
 .introduction-text-2 {
+    display: inline-block;
     margin-right: 5rem;
     font-size: 2rem;
-    color:rgb(255, 255, 255);
+    background-color: var(--introduction-caution-bg-color);
+    color: var(--intorudction-caution-color);
 }
 
 .wreath-img {
@@ -41,10 +43,11 @@
     background-size: contain;
     background-position: center;
     background-repeat: repeat-x;
-    position: absolute;
-    bottom: -31.5rem;
     z-index: 10;
 }
+
+/*
+    background: url("/images/Stock_photos/Christmas/wreath_1_2.png") no-repeat scroll center top transparent;*/
 
 .profile-container {
     display: flex;
@@ -128,11 +131,6 @@
     }
 }
 
-@media only screen and (max-width: 922px) {
-    .wreath-img {
-        bottom: -33.5rem;
-    }
-}
 
 @media only screen and (max-width: 880px) {
     .profile-img-container {
@@ -176,18 +174,6 @@
     }
 }
 
-@media only screen and (max-width: 683px) {
-    .wreath-img {
-        bottom: -35rem;
-    }
-}
-
-@media only screen and (max-width: 644px) {
-    .wreath-img {
-        bottom: -36rem;
-    }
-}
-
 @media only screen and (max-width: 640px) {
     .introduction-text-1 {
         margin-right: .3rem;
@@ -222,9 +208,10 @@
     }
 }
 
-@media only screen and (max-width: 591px) {
+@media only screen and (max-width: 620px) {
     .wreath-img {
-        bottom: -33rem;
+        background-size: cover;
+
     }
 }
 
@@ -252,18 +239,6 @@
     .profile-text-container {
         width: 90%;
         margin: 0rem auto;
-    }
-}
-
-@media only screen and (max-width: 461px) {
-    .wreath-img {
-        bottom: -35rem;
-    }
-}
-
-@media only screen and (max-width: 426px) {
-    .wreath-img {
-        bottom: -34rem;
     }
 }
 
