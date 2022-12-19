@@ -6,7 +6,7 @@
   position: relative;
   margin: auto;
   overflow: hidden;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   background-color: var(--counter-bg-color);
   z-index: 10;
 }
@@ -14,11 +14,20 @@
 #countdown-title {
   text-align: center;
   margin-top: 2rem;
-  margin-bottom: 9rem;
+  margin-bottom: .5rem;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: .25rem;
-  font-family: "Lato";
+  font-family: var(--font-family-countdown);
+}
+
+#countdown-title-undertext {
+  text-align: center;
+  font-family: var(--font-family-countdown);
+  margin-bottom: 0rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .25rem;
 }
 
 /* I don't think this is used */
@@ -52,52 +61,54 @@
 
 .counter-img-container-1 {
     width: 100%;
-    height: 8rem;
-    position: absolute;
-    bottom: 52%;
-    right: 11.1rem;
-    z-index: -1;
+    height: 9rem;
 }
 
 #counter-img-1 {
-    height: 100%;
+    height: 90%;
     object-fit: cover;
+    position: relative;
+    top: 12%;
+    z-index: -1;
 }
 
 .counter-img-container-2 {
     width: 100%;
     height: 9rem;
-    position: absolute;
-    bottom: 52%;
-    left: 11rem;
-    z-index: -1;
 }
 
 #counter-img-2 {
-    height: 100%;
+    height: 110%;
     object-fit: cover;
+    position: relative;
+    bottom: 8%;
+    z-index: -1;
 }
 
 .counter-img-container-3 {
     width: 100%;
-    height: 7rem;
-    position: absolute;
-    bottom: 52%;
-    right: 3.6rem;
-    z-index: -1;
+    height: 9rem;
 }
 
 #counter-img-3 {
-    height: 100%;
+    height: 80%;
     object-fit: cover;
+    position: relative;
+    top: 22%;
+    z-index: -1;
 }
 
 #timer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 1rem;
   color: var(--counter-white);
   text-align: center;
   text-transform: uppercase;
   font-size: .7rem;
   letter-spacing: .25rem;
+  z-index: 10;
 }
 
 .days, .hours, .minutes, .seconds {
@@ -118,6 +129,8 @@
 
 .minutes {
   background: var(--counter-minutes-color);
+  align-self: flex-end;
+  min-width: 7rem;
 }
 
 .seconds {
@@ -138,21 +151,7 @@
 }
 
 
-@media only screen and (max-width: 922px) {
-  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
-    bottom: 55%;
-  }
-}
-
 @media only screen and (max-width: 683px) {
-  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
-    bottom: 52%;
-  }
-
-  #countdown-title {
-    margin-bottom: 8rem;
-  }
-
   #countdown-greeting {
     width: 90%;
   }
@@ -160,33 +159,32 @@
   #countdown-greeting-undertext {
     width: 80%;
   }
-}
 
-@media only screen and (max-width: 644px) {
-  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
-    bottom: 54%;
+  .days, .hours, .minutes, .seconds {
+    padding: 1rem;
+    width: 6rem;
+    height: 6rem;
   }
 
+  .minutes {
+    min-width: 6rem;
+  }
+
+  .numbers {
+    font-size: 2.5rem;
+  }
+
+  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
+    height: 7rem;
+  }
 }
+
 
 @media only screen and (max-width: 591px) {
-  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
-    bottom: 50%;
-  }
-
-  .counter-img-container-1 {
-    right: 7.9rem;
-  }
-  .counter-img-container-2 {
-    left: 8rem;
-  }
-  .counter-img-container-3 {
-    right: 2.6rem;
-  }
-
   #timer {
     font-size: .6rem;
     letter-spacing: .2rem;
+    column-gap: .8rem;
   }
   
   .days, .hours, .minutes, .seconds {
@@ -195,15 +193,26 @@
     height: 5rem;
   }
 
+  .minutes {
+    min-width: 5rem;
+  }
+
   .numbers {
-    color: var(--counter-dark);
     font-size: 2rem;
     padding-top: .8rem;
+  }
+
+  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
+    height: 6rem;
   }
 
   #countdown-title {
     font-size: 2rem;
     letter-spacing: .25rem;
+  }
+
+  #countdown-title-undertext {
+    margin-bottom: .5rem;
   }
 
   #countdown-greeting {
@@ -219,106 +228,73 @@
   }
 }
 
-@media only screen and (max-width: 461px) {
-  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
-    bottom: 52%;
-  }
 
-}
-
-@media only screen and (max-width: 426px) {
-  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
-    bottom: 52%;
-  }
-
-  .counter-img-container-1 {
-    right: 6.4rem;
-    height: 7rem;
-  }
-  .counter-img-container-2 {
-    left: 6.6rem;
-    height: 8rem;
-  }
-  .counter-img-container-3 {
-    right: 2.1rem;
-    height: 6rem;
-  }
-
+@media only screen and (max-width: 490px) {
   #timer {
     font-size: .6rem;
     letter-spacing: .2rem;
+    column-gap: .6rem;
   }
   
   .days, .hours, .minutes, .seconds {
-    padding: .2rem;
     width: 4rem;
     height: 4rem;
   }
+  
+  .minutes {
+    min-width: 4rem;
+  }
+
+  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
+    height: 5.5rem;
+  }
 
   .numbers {
-    color: var(--counter-dark);
     font-size: 1.8rem;
     padding-top: .5rem;
   }
+
+  #countdown-title-undertext {
+    width: 90%;
+    margin: auto;
+    margin-bottom: .5rem;
+  }
 }
 
-@media only screen and (max-width: 346px) {
-  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
-    bottom: 52%;
-  }
-
-  .counter-img-container-1 {
-    right: 5.7rem;
-    height: 6rem;
-  }
-  .counter-img-container-2 {
-    left: 5.8rem;
-    height: 6rem;
-  }
-  .counter-img-container-3 {
-    right: 1.9rem;
-    height: 5rem;
-  }
-
+@media only screen and (max-width: 410px) {
   #timer {
     font-size: .6rem;
     letter-spacing: .2rem;
   }
   
   .days, .hours, .minutes, .seconds {
-    padding: .2rem;
     width: 3.5rem;
     height: 3.5rem;
   }
 
+  .minutes {
+    min-width: 3.5rem;
+  }
+
+  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
+    height: 5rem;
+  }
+
   .numbers {
-    color: var(--counter-dark);
     font-size: 1.5rem;
     padding-top: .3rem;
   }
+
+  #countdown-title-undertext {
+    margin-bottom: 0rem;
+  }
 }
 
-@media only screen and (max-width: 306px) {
-  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
-    bottom: 52%;
-  }
-
-  .counter-img-container-1 {
-    right: 4.8rem;
-    height: 5rem;
-  }
-  .counter-img-container-2 {
-    left: 4.9rem;
-    height: 5rem;
-  }
-  .counter-img-container-3 {
-    right: 1.6rem;
-    height: 4rem;
-  }
-
+@media only screen and (max-width: 340px) {
   #timer {
     font-size: .5rem;
     letter-spacing: .15rem;
+    column-gap: .5rem;
   }
   
   .days, .hours, .minutes, .seconds {
@@ -327,9 +303,15 @@
     height: 3rem;
   }
 
+  .minutes {
+    min-width: 3rem;
+  }
+
+  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
+    height: 4.5rem;
+  }
+
   .numbers {
-    color: var(--counter-dark);
     font-size: 1.2rem;
-    padding-top: .3rem;
   }
 }

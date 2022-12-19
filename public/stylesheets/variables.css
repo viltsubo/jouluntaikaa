@@ -1,6 +1,7 @@
 :root {
     --font-color: black;
     --font-size: 20px;
+    --font-family-countdown: "Lato";
     --scrollbar-color: white;
     --scrollbar-thumb-color: 
     rgb(173, 93, 18);

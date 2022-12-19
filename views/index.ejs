@@ -111,7 +111,7 @@
             aamujaLeft = (Math.round(aamujaLeft * 100) / 100).toFixed(2)
 
             // User greeting texts
-            document.getElementById('countdown-title').innerHTML = `Milloin se lähtee?`
+            document.getElementById('countdown-title-undertext').innerHTML = `Milloin siitä pääsee eroon?`
             document.getElementById('countdown-greeting').innerHTML = `${aamujaLeft} aamua jäljellä kärsittävänä`
             document.getElementById('countdown-greeting-undertext').innerHTML = 'Ei se mitään, kohta se on ohi. Kestät vielä!'
         } else {
@@ -123,7 +123,7 @@
             aamujaLeft = (Math.round(aamujaLeft * 100) / 100).toFixed(2)
 
             // User greeting texts
-            document.getElementById('countdown-title').innerHTML = `Milloin se tulee takaisin?`
+            document.getElementById('countdown-title-undertext').innerHTML = `Milloin se palaa takaisin?`
             document.getElementById('countdown-greeting').innerHTML = `${aamujaLeft} rauhan aamua jäljellä`
             document.getElementById('countdown-greeting-undertext').innerHTML = 'Nauti vähenevistä sekunneista kun vielä voit. Pian alkaa kärsimys!'
         }
@@ -137,30 +137,39 @@
         // Injects #timer with correct data
         document.getElementById("timer").innerHTML = 
         `
-            <div class="counter-img-container-2">
-                <img id="counter-img-2" src="./images/Stock_photos/Christmas/tree_2.png" alt="">
+            <div class="timer-flexbox">
+                <div class="counter-img-container-1">
+                    <img id="counter-img-1" src="./images/Stock_photos/Christmas/tree_1.png" alt="">
+                </div>
+                <div class="days">
+                    <div class="numbers"> ${days} </div>
+                    days
+                </div>
             </div>
-            <div class="days">
-                <div class="numbers"> ${days} </div>
-                days
+
+            <div class="timer-flexbox">
+                <div class="counter-img-container-3">
+                    <img id="counter-img-3" src="./images/Stock_photos/Christmas/tree_3.png" alt="">
+                </div>
+                <div class="hours">
+                    <div class="numbers"> ${hours} </div>
+                    hours
+                </div>
             </div>
-            <div class="counter-img-container-1">
-                <img id="counter-img-1" src="./images/Stock_photos/Christmas/tree_1.png" alt="">
-            </div>
-            <div class="hours">
-                <div class="numbers"> ${hours} </div>
-                hours
-            </div>
+
             <div class="minutes">
                 <div class="numbers"> ${minutes} </div>
                 min
             </div>
-            <div class="counter-img-container-3">
-                <img id="counter-img-3" src="./images/Stock_photos/Christmas/tree_3.png" alt="">
-            </div>
-            <div class="seconds">
-                <div class="numbers"> ${seconds} </div>
-                sec
+
+            <div class="timer-flexbox">
+                <div class="counter-img-container-2">
+                    <img id="counter-img-2" src="./images/Stock_photos/Christmas/tree_2.png" alt="">
+                </div>
+                <div class="seconds">
+                    <div class="numbers"> ${seconds} </div>
+                    sec
+                </div>
             </div>
         `
 
@@ -168,7 +177,8 @@
 </script>
 
 <div class="counter-container">
-    <h1 id="countdown-title">Milloin se tulee takaisin?</h1>
+    <h1 id="countdown-title">TJ-laskuri</h1>
+    <div id="countdown-title-undertext">Milloin se lähtee pois täältä?</div>
     <div id="timer"></div>
     <div id="countdown-greeting"></div>
     <div id="countdown-greeting-undertext"></div>

@@ -31,8 +31,7 @@
     display: inline-block;
     margin-right: 5rem;
     font-size: 2rem;
-    background-color: var(--introduction-caution-bg-color);
-    color: var(--intorudction-caution-color);
+    color: rgb(255, 255, 255);
 }
 
 .wreath-img {
@@ -51,7 +50,7 @@
     flex-direction: row;
     justify-content: center;
     background-color: var(--profile-bg-color);
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-bottom: 3rem;
 }
 
