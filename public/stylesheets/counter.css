@@ -233,16 +233,15 @@
   #timer {
     font-size: .6rem;
     letter-spacing: .2rem;
-    column-gap: .6rem;
   }
   
   .days, .hours, .minutes, .seconds {
-    width: 4rem;
-    height: 4rem;
+    width: 4.5rem;
+    height: 4.5rem;
   }
   
   .minutes {
-    min-width: 4rem;
+    min-width: 4.5rem;
   }
 
   .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
@@ -261,13 +260,44 @@
   }
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 450px) {
   #timer {
     font-size: .6rem;
     letter-spacing: .2rem;
   }
   
   .days, .hours, .minutes, .seconds {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .minutes {
+    min-width: 4rem;
+  }
+
+  .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
+    height: 4.8rem;
+  }
+
+  .numbers {
+    font-size: 1.5rem;
+    padding-top: .5rem;
+  }
+
+  #countdown-title-undertext {
+    margin-bottom: 0rem;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  #timer {
+    font-size: .5rem;
+    letter-spacing: .15rem;
+    column-gap: .7rem;
+  }
+  
+  .days, .hours, .minutes, .seconds {
+    padding: .2rem;
     width: 3.5rem;
     height: 3.5rem;
   }
@@ -277,26 +307,16 @@
   }
 
   .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
-    height: 5rem;
+    height: 4.3rem;
   }
 
   .numbers {
-    font-size: 1.5rem;
-    padding-top: .3rem;
-  }
-
-  #countdown-title-undertext {
-    margin-bottom: 0rem;
+    padding-top: .5rem;
+    font-size: 1.4rem;
   }
 }
 
-@media only screen and (max-width: 340px) {
-  #timer {
-    font-size: .5rem;
-    letter-spacing: .15rem;
-    column-gap: .5rem;
-  }
-  
+@media only screen and (max-width: 350px) {
   .days, .hours, .minutes, .seconds {
     padding: .2rem;
     width: 3rem;
@@ -308,10 +328,12 @@
   }
 
   .counter-img-container-1, .counter-img-container-2, .counter-img-container-3 {
-    height: 4.5rem;
+    height: 3.8rem;
   }
 
   .numbers {
-    font-size: 1.2rem;
+    padding-top: .4rem;
+    font-size: 1.1rem;
   }
+
 }
