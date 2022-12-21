@@ -104,6 +104,7 @@
 
 .profile-text-bulletpoints li {
     padding: .1rem 0rem;
+    overflow-wrap: break-word;
 }
 
 .link-text {
@@ -115,6 +116,22 @@
 .change-font {
     font-family: Arial;
 }
+
+.profile-img-section-container {
+    width: 20rem;
+    height: 16rem;
+    overflow: hidden;
+    margin: 1rem auto;
+    display: none;
+}
+
+.profile-img-section {
+    width: 100%;
+    position: relative;
+    bottom: 60%;
+    object-fit: cover;
+}
+
 
 @media only screen and (max-width: 1000px) {
     .introduction-text-1 {
@@ -140,7 +157,7 @@
     }
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 745px) {
     .introduction-text-container {
         top: 33%;
     }
@@ -170,7 +187,7 @@
     }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 740px) {
     .introduction-text-1 {
         margin-right: .3rem;
     }
@@ -190,6 +207,9 @@
         display: none;
     }
     .mobile-profile-img {
+        display: block;
+    }
+    .profile-img-section-container {
         display: block;
     }
     .profile-img-container {
@@ -231,6 +251,16 @@
         height: 20rem;
         object-position: 100% 40%;
     }
+
+    .profile-img-section-container {
+        width: 90%;
+        height: 16rem;
+    }
+    .profile-img-section {
+        height: 16rem;
+        bottom: 0%;
+        object-position: 50% 67%;
+    }
     
     .profile-text-container {
         width: 90%;
@@ -244,5 +274,13 @@
     }
     .introduction-text-1 {
         margin-bottom: .8rem;
+    }
+
+    .profile-img-section-container {
+        height: 13rem;
+    }
+    .profile-img-section {
+        height: 13rem;
+        object-position: 50% 67%;
     }
 }

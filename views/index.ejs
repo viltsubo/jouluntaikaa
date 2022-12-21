@@ -32,8 +32,8 @@
         
 
         /* *--------------------start-------------------* */
-        // DELETE THIS IF YOU WANT TO USE SOME MANUALLY SET DATES
-
+        // DELETE THIS IF YOU WANT TO USE MANUALLY SET DATES
+        /*
         // Get next loma date (broken case where it's Sat or Sun and gives next week's friday is catched with logic below)
         const lomaYear = getNextDay(5).getFullYear()
         const lomaMonth = getNextDay(5).getMonth()
@@ -66,20 +66,19 @@
             // Handles any unknow broken cases (f.ex. when time equals lomaDate or paluuDate)
             lomilla = false
         }
-
+        */
         /* *--------------------end-------------------* */
 
 
 
         /* *--------------------start-------------------* */
         // DELETE THIS IF YOU WANT TO USE AUTOMATIC DEFAULT DATES
-        /*
 
         // This section is used for countdown when lomadate is non default date (you can manually set it)
 
         // Set dates here yyyy mm (starts at 0), dd, hh, mm
         const lomaDate = new Date(2022, 11, 22, 16).getTime()
-        const paluuDate = new Date(2023, 0, 2, 16).getTime()
+        const paluuDate = new Date(2023, 0, 2, 16, 20).getTime()
 
         // Logic to check if lomilla or not
         if (today < lomaDate) {
@@ -96,7 +95,6 @@
             lomilla = false
         }
 
-        */
         /* *--------------------end-------------------* */
         
 
@@ -196,7 +194,9 @@
         <div class="profile-img-container mobile-profile-img">
             <img src="./images/Ronja/ronja_portrait_2.jpg" alt="" class="profile-img">
         </div>
-        <div class="profile-text">Ronja, Rumpu, <span class="line-through">Muru</span>, Palleroinen, Mommy, Vitunääliö, Muumimamma, Tiskaaja... Rakkailla lapsilla on monta nimeä. Jostain syystä myös sinulla. Kenties yksi nimi jokaiselle lukuisista alter egoistasi? Niitä kyllä riittää, jaksat nimittäin jatkuvasti hämmästyttää uusilla puolillasi. Yleensä yllätykset ovat positiivisia, mutta eivät ain.. krhm, siis ovat aina positiivisia... <br>...<br> Tarkastellaan seuraavaksi, mistä paloista tuo mystinen Maria rakentuu. Erityisesti näistä pidän!</div>
+        <div class="profile-text">
+            Ronja, Rumpu, <span class="line-through">Muru</span>, Palleroinen, Mommy, Vitunääliö, Muumimamma, Tiskaaja... Rakkailla lapsilla on monta nimeä. Jostain syystä myös sinulla. Kenties yksi nimi jokaiselle lukuisista alter egoistasi? Niitä kyllä riittää, jaksat nimittäin jatkuvasti hämmästyttää uusilla puolillasi. Yleensä yllätykset ovat positiivisia, mutta eivät ain.. krhm, siis ovat aina positiivisia... <br>...<br> Tarkastellaan seuraavaksi, mistä paloista tuo mystinen Maria rakentuu. Erityisesti näistä pidän!
+        </div>
         <ul class="profile-text-bulletpoints">
             <li>Seurassasi on hyvä olla. Tuot pelkällä läsnäolollasi mukana positiivisuuden auran</li>
             <li>Ootvitunkuumajafiksujahauska</li>
@@ -205,7 +205,15 @@
             <li>Jostain tuntemattomasta syystä kaulassasi on usein hankaumia..</li>
             <li>Oot aivan ihana😍 En voisi kuvitella parempaa tyttöystävää (trust me, yritin ja siitä tuli klooni susta)</li>
         </ul>
-        <div class="profile-text-2">Ja listahan jatkuu tietenkin loputtomiin. Jokainen puolistasi on tärkeä ja niiden summa tekee sinusta sinut: täydellisen.<br><br>Vaikka arki ja aikataulut ovat vähentäneet yhteistä aikaa, niin ne yksittäiset yhteiset hetket ovat olleet sitäkin tärkeämpiä. Aika kanssasi on ollut aivan parasta! Toivon, että pääsemme viettämään vielä monia ihania hetkiä yhdessä ja nauttimaan elämästä. <br><br> Toivottavasti edes häivähdys siitä viestistä jonka halusin sanoa, välittyi tämän visuaalisen kakofonian läpi❤️ Vielä kerran, jotta mikään ei jää epäselväksi: olet hurmaava rakkauspakkaus. En vieläkään ymmärrä miten olen sinut napannut, mutta äärimmäisen onnellinen siitä, että olet haavissani😘</div>
+        <div class="profile-text-2">
+            Ja listahan jatkuu tietenkin loputtomiin. Jokainen puolistasi on tärkeä ja niiden summa tekee sinusta sinut: täydellisen.
+        </div>
+        <div class="profile-img-section-container">
+            <img src="./images/Stock_photos/Christmas/car_toy.jpg" alt="" class="profile-img-section">
+        </div>
+        <div class="profile-text-2">
+            Vaikka arki ja aikataulut ovat vähentäneet yhteistä aikaa, niin ne yksittäiset yhteiset hetket ovat olleet sitäkin tärkeämpiä. Aika kanssasi on ollut aivan parasta! Toivon, että pääsemme viettämään vielä monia ihania hetkiä yhdessä ja nauttimaan elämästä. <br><br> Toivottavasti edes häivähdys siitä viestistä jonka halusin sanoa, välittyi tämän visuaalisen kakofonian läpi❤️ Vielä kerran, jotta mikään ei jää epäselväksi: olet hurmaava rakkauspakkaus. En vieläkään ymmärrä miten olen sinut napannut, mutta äärimmäisen onnellinen siitä, että olet haavissani😘
+        </div>
     </div>
 </section>
 
