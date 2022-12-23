@@ -132,6 +132,27 @@
     object-fit: cover;
 }
 
+.gift-card-section-container {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background-color: var(--gift-card-section-bg-color);
+}
+
+.gift-card-section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.gift-card-container {
+    width: 30rem;
+    margin: 0 auto;
+}
+
+.gift-card {
+    width: 100%;
+}
+
 
 @media only screen and (max-width: 1000px) {
     .introduction-text-1 {
@@ -221,6 +242,10 @@
     .profile-text-container {
         width: 25rem;
         margin: 0rem auto;
+    }
+
+    .gift-card-container {
+        width: 85%;
     }
 }
 
